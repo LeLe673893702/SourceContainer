@@ -53,7 +53,7 @@ public class SourceArrayList<E>{
         // 比如1,2,3,4,5,index = 2 size-index = 3，复制完1,2,3,3,4,5
         System.arraycopy(elementData,index,elementData,index+1,size - index);
         // 替换过去
-        elementData[index] = elementData;
+        elementData[index] = e;
         size++;
     }
 
@@ -62,7 +62,7 @@ public class SourceArrayList<E>{
     * 获取元素
     *
     * */
-    private E get(int index) {
+    public E get(int index) {
         rangeCheck(index);
 
         return (E)elementData[index];

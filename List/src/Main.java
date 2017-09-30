@@ -3,19 +3,15 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Integer> integers = new ArrayList<Integer>();
-        for (int i = 0 ; i < 10; i++) {
-            integers.add(i);
+        SourceArrayList<Integer> integerSourceArrayList = new SourceArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            integerSourceArrayList.add(i);
         }
+        integerSourceArrayList.set(5,100);
 
-        ArrayList<Integer> integers1 = new ArrayList<>();
-        integers1.add(5);
-        integers1.add(1);
-        integers.removeAll(integers1);
-        for (Integer integer : integers){
-            System.out.println(integer);
+        for (int i =0 ; i < 10; i++) {
+            System.out.println(integerSourceArrayList.get(i));
         }
-
     }
 
 
